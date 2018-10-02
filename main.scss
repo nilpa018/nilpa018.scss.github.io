@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "ani";
+  src: url("polices/anicb___.ttf") format("truetype");
+  src: url("polices/anicm___.ttf") format("truetype");
+  src: url("polices/anirb___.ttf") format("truetype");
+  src: url("polices/anirm___.ttf") format("truetype");
+}
+body {
+  background: url(images/bg_light.png);
+}
+
+h1 {
+  display: inline-block;
+}
+
+.d-flex.justify-content-center.align-items-center {
+  margin: 50px auto;
+}
+
+.color {
+  color: #1a1a1a;
+  color: black;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.myRingYellow {
+  width: 200px !important;
+  height: 200px !important;
+  border: #FCCA01 15px solid !important;
+  border-radius: 200px;
+  box-shadow: 4px 4px 10px #D9B31F;
+  float: left;
+  display: inline-block;
+  margin: 0 30px;
+}
+
+.myRingOrange {
+  width: 80px !important;
+  height: 80px !important;
+  border: #FF6804 8px solid !important;
+  border-radius: 80px;
+  box-shadow: 2px 2px 5px #FF6804;
+  display: inline-block;
+  margin: 0 30px;
+}
+
+.container {
+  margin: 20px auto;
+}
+
+.media {
+  width: auto;
+  height: 230px;
+  margin: 2em;
+  text-align: center;
+  overflow: auto;
+}
+
+.font-party {
+  font-family: "ani" !important;
+  font-size: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+}
+.nav-link:hover {
+  color: white;
+  opacity: 1;
+}
+
+.color-orange {
+  background-color: #FF5F01;
+}
+
+.widget-title a {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #FF5F01;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li a {
+  font-family: "ani" !important;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+  font-weight: bold;
+}
+
+footer li a:hover {
+  color: white;
+  opacity: 1;
+  text-decoration: none;
+}
+@mixin ring($size, $color) {
+        width: $size;
+        height: $size;
+        border: $color 8px solid !important; 
+        border-radius: $size;   
+        box-shadow: 2px 2px 5px $color;
+    } 
+
+@for $i from 1 through 6 {
+  .ring-serie-#{$i} {
+  @include ring($i*20px,black);
+  display: inline-block;
+  margin-right: -10px;
+  }
+}
